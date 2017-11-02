@@ -45,7 +45,8 @@ form {
 h1 {
   font-size: 100px;
   animation: glow 5s ease-in-out infinite;
-  position: absolute; }
+  position: absolute;
+  font-family: papyrus; }
 
 #title {
   display: flex;
@@ -107,5 +108,60 @@ h1:nth-child(9) {
 
 h1:nth-child(10) {
   transform: translateZ(45px); }
+
+.container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  perspective: 800;
+  perspective-origin: 50% 100px;
+  margin-left: 150px; }
+
+.cube {
+  width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 1s 1 linear;
+  animation-fill-mode: forwards; }
+  .cube:active {
+    animation: spin-two 1s 1 linear;
+    animation-fill-mode: forwards; }
+
+.side {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  display: block;
+  position: absolute; }
+
+.front {
+  background-color: red;
+  transform: translateZ(200px); }
+
+.right {
+  background-color: blue;
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right; }
+
+.back {
+  background-color: green;
+  transform: translateZ(-100px) rotateY(180deg); }
+
+.left {
+  background-color: yellow;
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+  width: 300px; }
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0); }
+  100% {
+    transform: rotateY(90deg); } }
+@keyframes spin-two {
+  0% {
+    transform: rotateY(0); }
+  100% {
+    transform: rotateY(-90deg); } }
 
 /*# sourceMappingURL=master.css.map */
