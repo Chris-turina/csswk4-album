@@ -1,0 +1,16 @@
+.output {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.para {
+  display: flex;
+  flex-direction: column;
+}
