@@ -42,73 +42,6 @@ form {
   display: flex;
   flex-direction: column; }
 
-h1 {
-  font-size: 100px;
-  animation: glow 5s ease-in-out infinite;
-  position: absolute;
-  font-family: papyrus; }
-
-#title {
-  display: flex;
-  justify-content: center;
-  height: 200px;
-  width: 100%; }
-
-.title {
-  animation: wobble 5s ease-in-out infinite;
-  transform-origin: center center;
-  transform-style: preserve-3d;
-  position: relative; }
-
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 30px royalblue; }
-  25% {
-    text-shadow: 0 0 30px honeydew; }
-  50% {
-    text-shadow: 0 0 30px hotpink; }
-  75% {
-    text-shadow: 0 0 30px limegreen; }
-  100% {
-    text-shadow: 0 0 30px royalblue; } }
-@keyframes wobble {
-  0% {
-    transform: rotate3d(1, 1, 0, 25deg); }
-  25% {
-    transform: rotate3d(-1, 1, 0, 25deg); }
-  50% {
-    transform: rotate3d(-1, -1, 0, 25deg); }
-  75% {
-    transform: rotate3d(1, -1, 0, 25deg); }
-  100% {
-    transform: rotate3d(1, 1, 0, 25deg); } }
-h1:nth-child(2) {
-  transform: translateZ(5px); }
-
-h1:nth-child(3) {
-  transform: translateZ(10px); }
-
-h1:nth-child(4) {
-  transform: translateZ(15px); }
-
-h1:nth-child(5) {
-  transform: translateZ(20px); }
-
-h1:nth-child(6) {
-  transform: translateZ(25px); }
-
-h1:nth-child(7) {
-  transform: translateZ(30px); }
-
-h1:nth-child(8) {
-  transform: translateZ(35px); }
-
-h1:nth-child(9) {
-  transform: translateZ(40px); }
-
-h1:nth-child(10) {
-  transform: translateZ(45px); }
-
 .container {
   width: 300px;
   height: 300px;
@@ -121,11 +54,57 @@ h1:nth-child(10) {
   width: 300px;
   position: relative;
   transform-style: preserve-3d;
-  animation: spin 1s 1 linear;
+  animation: spinright-one 1s 1 linear;
   animation-fill-mode: forwards; }
-  .cube:active {
-    animation: spin-two 1s 1 linear;
-    animation-fill-mode: forwards; }
+
+.spinright-two {
+  width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinright-two 1s 1 linear;
+  animation-fill-mode: forwards; }
+
+.spinright-three {
+  width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinright-three 1s 1 linear;
+  animation-fill-mode: forwards; }
+
+.spinright-four {
+  width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinright-four 1s 1 linear;
+  animation-fill-mode: forwards; }
+
+.spinleft-one {
+  width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinleft-one 1s 1 linear;
+  animation-fill-mode: forwards; }
+
+.spinleft-two {
+  width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinleft-two 1s 1 linear;
+  animation-fill-mode: forwards; }
+
+.spinleft-three {
+  width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinleft-three 1s 1 linear;
+  animation-fill-mode: forwards; }
+
+.spinleft-four {
+  width: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinleft-four 1s 1 linear;
+  animation-fill-mode: forwards; }
 
 .side {
   text-align: center;
@@ -153,15 +132,45 @@ h1:nth-child(10) {
   transform-origin: center left;
   width: 300px; }
 
-@keyframes spin {
+@keyframes spinright-one {
   0% {
     transform: rotateY(0); }
   100% {
     transform: rotateY(90deg); } }
-@keyframes spin-two {
+@keyframes spinright-two {
+  0% {
+    transform: rotateY(90deg); }
+  100% {
+    transform: rotateY(180deg); } }
+@keyframes spinright-three {
+  0% {
+    transform: rotateY(180deg); }
+  100% {
+    transform: rotateY(270deg); } }
+@keyframes spinright-four {
+  0% {
+    transform: rotateY(270deg); }
+  100% {
+    transform: rotateY(0deg); } }
+@keyframes spinleft-one {
   0% {
     transform: rotateY(0); }
   100% {
     transform: rotateY(-90deg); } }
+@keyframes spinleft-two {
+  0% {
+    transform: rotateY(-90deg); }
+  100% {
+    transform: rotateY(-180deg); } }
+@keyframes spinleft-three {
+  0% {
+    transform: rotateY(-180deg); }
+  100% {
+    transform: rotateY(-270deg); } }
+@keyframes spinleft-four {
+  0% {
+    transform: rotateY(-270deg); }
+  100% {
+    transform: rotateY(0); } }
 
 /*# sourceMappingURL=master.css.map */
